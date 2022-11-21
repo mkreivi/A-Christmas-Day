@@ -4,4 +4,4 @@ Spelaren vaknar upp en morgon i december och ser att det snöat massor under nat
 
 
 Klicka på länken för att komma till spelet
-https://github.com/mkreivi/Projekt-A-Christmas-Day.git
+https://github.com/mkreivi/A-Christmas-Day.git
