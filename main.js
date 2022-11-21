@@ -81,11 +81,11 @@ function loadStartScene(){
 }
 
 /**
- * Spelaren får två nya val, 'titta på köksluckor' eller 'titta på kyl och frys', för att gå vidare.
+ * Spelaren får två nya val, 'göra snöänglar' eller 'bygga en snölykta', för att gå vidare.
  */
 function snowMan() {
     text1.textContent = "Snögubbe";
-    text2.textContent = "Du hoppar glatt i vinterkläderna och springer ut och börjar forma stora snöbollar!";
+    text2.textContent = "Du hoppar glatt i vinterkläderna och springer ut och börjar forma stora snöbollar! Vad vill du göra nu?";
     button1.textContent = "Snöänglar";
     button2.textContent = "Snölykta";
 
@@ -94,7 +94,7 @@ function snowMan() {
 }
 
 /**
- * Spelaren får två nya val, 'gå till vardagsrummet' eller 'titta på kyl och frys', för att gå vidare.
+ * Spelaren får två nya val, 'dricka varm choklad' eller 'titta på julfilm', för att gå vidare.
  */
 function snowAngel() {
     text1.textContent = "Snöänglar"
@@ -107,7 +107,7 @@ function snowAngel() {
 }
 
 /**
- * Spelaren får två nya val, 'gå upp för trappan' eller 'titta i badrummet', för att gå vidare.
+ * Spelaren får två nya val, 'göra snöänglar' eller 'bygga en snölykta', för att gå vidare.
  */
 function slide() {
     text1.textContent = "Åka pulka"
@@ -120,7 +120,7 @@ function slide() {
 }
 
 /**
- * Spelaren får två nya val, 'ta trappan till annan våning' eller 'gå till köket', för att gå vidare.
+ * Spelaren får två nya val, 'dricka varm choklad' eller 'titta på julfilm', för att gå vidare.
  */
 function snowBallLights() {
     text1.textContent = "Snölykta"
@@ -133,7 +133,7 @@ function snowBallLights() {
 }
 
 /**
- * Spelaren får två nya val, 'titta i sovrummen' eller 'titta i badrummet', för att gå vidare.
+ * Spelaren får två nya val, 'titta på film' eller 'sova', för att gå vidare.
  */
 function hotChoclate() {
     text1.textContent = "Dricka varm choklad"
@@ -146,7 +146,7 @@ function hotChoclate() {
 }
 
 /**
- * Spelaren får två nya val, 'gå upp till övervåningen' eller 'gå tillbaka till hallen', för att gå vidare.
+ * Spelaren får två nya val där de väljer favoritfilm, 'Tomten är far till alla barnen' eller 'Ensam hemma', för att gå vidare.
  */
 function movie() {
     text1.textContent = "Titta på julfilm"
@@ -173,6 +173,9 @@ function endGame() {
     button2.onclick = goodbye;
     
 }
+/**
+ * Spelaren får två nya val, 'göra om spelet igen' eller 'avsluta', för att gå vidare.
+ */
 function endGame2() {
     text1.textContent = "Vilken mysig dag det blev " + playerName + "!"
     text2.textContent = "Vad vill du göra nu?"
@@ -183,6 +186,10 @@ function endGame2() {
     button2.onclick = goodbye;
     
 }
+
+/**
+ * Spelaren får ett sita meddelande där denne tackas för idag och önskas en God Jul
+ */
 function goodbye() {
     text1.textContent = "Tack för idag " + playerName + ""
     text2.textContent = "och en riktigt God Jul till dig !"
