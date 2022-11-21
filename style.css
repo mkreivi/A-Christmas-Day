@@ -1,6 +1,10 @@
 :root {
     --header-height: 5rem;
 }
+.backgroundImage1 {
+    position: relative;
+    width: 100%;
+}
 header {
     position: fixed;
     background: lightgray;

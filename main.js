@@ -1,6 +1,8 @@
 window.addEventListener("DOMContentLoaded", main);
 
-
+/**
+ * Globala element som upprepas igenom hela spelet
+ */
 let text1;
 let text2;
 let text3;
@@ -38,6 +40,7 @@ function setAllConstants(){
 /**
  * Välkomnar spelaren och låter denne skriva in sitt namn. Om spelaren inte vill
  * skriva in sitt namn kommer inget namn att visas.
+ * Kör functionen för allConstants
  */
 function loadFirstBoxWithInput() {
     setAllConstants();
@@ -62,6 +65,7 @@ function loadFirstBoxWithInput() {
 }
 
 /**
+ * Gömmer elementet med inputfält och plockar fram elementet med knappar
  * Spelaren får välja mellan två val, 'Bygga en snögubbe' eller 'Åka pulka', för att gå vidare.
  */
 function loadStartScene(){
@@ -189,7 +193,7 @@ function endGame2() {
 
 /**
  * Spelaren får ett sita meddelande där denne tackas för idag och önskas en God Jul,
- * trycker du på "Börja om" så börjar spelat om från scenen där du hälsats välkommen,
+ * trycker du på "Börja om" så börjar spelat om från scenen där du hälsats välkommen med ditt namn,
  * Väljer du avsluta händer inget mer
  */
 function goodbye() {
