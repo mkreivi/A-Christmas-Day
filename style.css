@@ -1,0 +1,55 @@
+:root {
+    --header-height: 5rem;
+}
+header {
+    position: fixed;
+    background: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    inset: 0;
+    height: var(--header-height);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: white;
+}
+
+.bigBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: palevioletred;
+    margin-top: 10rem;
+    border-radius: 5px;
+    height: 350px;
+    width: 500px;
+    
+
+
+}
+.questionBox1 {
+    position: absolute;
+    height: 250px;
+    width: 400px;
+    border-radius: 5px;
+    background-color: steelblue;
+    color: white;
+    text-align: center;
+}
+
+.hidden {display: none;}
+    
+.questionBox2 {
+    position: absolute;
+    height: 250px;
+    width: 400px;
+    border-radius: 5px;
+    background-color: steelblue;
+    color: white;
+    text-align: center;
+}
