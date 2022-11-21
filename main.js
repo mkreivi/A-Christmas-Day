@@ -137,7 +137,7 @@ function snowBallLights() {
  */
 function hotChoclate() {
     text1.textContent = "Dricka varm choklad"
-    text2.textContent = "Du kokar upp mölk, oboy och en liten nypa vaniljsocker i. MUMS!"
+    text2.textContent = "Du kokar upp mölk, oboy och en liten nypa vaniljsocker i. MUMS! Vad vill du göra nu?"
     button1.textContent = "Filmdags"
     button2.textContent = "Sova"
 
@@ -188,11 +188,19 @@ function endGame2() {
 }
 
 /**
- * Spelaren får ett sita meddelande där denne tackas för idag och önskas en God Jul
+ * Spelaren får ett sita meddelande där denne tackas för idag och önskas en God Jul,
+ * trycker du på "Börja om" så börjar spelat om från scenen där du hälsats välkommen,
+ * Väljer du avsluta händer inget mer
  */
 function goodbye() {
     text1.textContent = "Tack för idag " + playerName + ""
     text2.textContent = "och en riktigt God Jul till dig !"
+
+    button1.textContent = "Börja om"
+    button2.textContent = "Avsluta"
+
+    button1.onclick = loadStartScene;
+    button2.onclick = goodbye;
 
     
 }

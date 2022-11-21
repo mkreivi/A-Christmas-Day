@@ -23,11 +23,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: palevioletred;
+    background-color:lightskyblue;
     margin-top: 10rem;
     border-radius: 5px;
     height: 350px;
-    width: 500px;
+    width: 600px;
     
 
 
@@ -35,7 +35,7 @@ body {
 .questionBox1 {
     position: absolute;
     height: 250px;
-    width: 400px;
+    width: 500px;
     border-radius: 5px;
     background-color: steelblue;
     color: white;
@@ -47,7 +47,7 @@ body {
 .questionBox2 {
     position: absolute;
     height: 250px;
-    width: 400px;
+    width: 500px;
     border-radius: 5px;
     background-color: steelblue;
     color: white;
