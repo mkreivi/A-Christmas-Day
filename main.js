@@ -62,7 +62,7 @@ function loadFirstBoxWithInput() {
 }
 
 /**
- * Spelaren får välja mellan två val, 'Köket' eller 'Vardagsrummet', för att gå vidare.
+ * Spelaren får välja mellan två val, 'Bygga en snögubbe' eller 'Åka pulka', för att gå vidare.
  */
 function loadStartScene(){
     setAllConstants();
@@ -75,8 +75,8 @@ function loadStartScene(){
     button1.textContent = "Bygga en snögubbe"
     button2.textContent = "Åka pulka"
 
-    button1.onclick = kitchen;
-    button2.onclick = livingRoom;
+    button1.onclick = snowMan;
+    button2.onclick = slide;
 
 }
 
@@ -84,114 +84,108 @@ function loadStartScene(){
  * Spelaren får två nya val, 'titta på köksluckor' eller 'titta på kyl och frys', för att gå vidare.
  */
 function snowMan() {
-    text1.textContent = "I köket";
-    text2.textContent = "Vad vill du titta på?";
-    button1.textContent = "Köksluckor";
-    button2.textContent = "Kyl och frys";
+    text1.textContent = "Snögubbe";
+    text2.textContent = "Du hoppar glatt i vinterkläderna och springer ut och börjar forma stora snöbollar!";
+    button1.textContent = "Snöänglar";
+    button2.textContent = "Snölykta";
 
-    button1.onclick = luckor;
-    button2.onclick = kylFrys; 
+    button1.onclick = snowAngel;
+    button2.onclick = snowBallLights;
 }
 
 /**
  * Spelaren får två nya val, 'gå till vardagsrummet' eller 'titta på kyl och frys', för att gå vidare.
  */
-function luckor() {
-    text1.textContent = "Köksluckor"
-    text2.textContent = "Inredningen är ju superfin! Vad vill göra nu?"
-    button1.textContent = "Till vardagsrummet"
-    button2.textContent = " Titta på kyl och frys"
+function snowAngel() {
+    text1.textContent = "Snöänglar"
+    text2.textContent = "Du slänger dig på marken och flaxar med armar och ben. Åh vad kul med snö! Men nu börjar det bli kallt, när vi kommer in vill du.."
+    button1.textContent = "Dricka varm choklad"
+    button2.textContent = " Titta på julfilm"
 
-    button1.onclick = livingRoom;
-    button2.onclick = kylFrys; 
+    button1.onclick = hotChoclate;
+    button2.onclick = movie;
 }
 
 /**
  * Spelaren får två nya val, 'gå upp för trappan' eller 'titta i badrummet', för att gå vidare.
  */
-function kylFrys() {
-    text1.textContent = "Kyl och frys"
-    text2.textContent = "Perfekt, här får det plats mycket. "
-    button1.textContent = "Trappan upp"
-    button2.textContent = "Badrummet"
+function slide() {
+    text1.textContent = "Åka pulka"
+    text2.textContent = "Weeeii vad det går! Vad vill du göra nu " + playerName + "?"
+    button1.textContent = "Snöängel"
+    button2.textContent = "Snölykta"
 
-    button1.onclick = stairs;
-    button2.onclick = bathroom;
+    button1.onclick = snowAngel;
+    button2.onclick = snowBallLights;
 }
 
 /**
  * Spelaren får två nya val, 'ta trappan till annan våning' eller 'gå till köket', för att gå vidare.
  */
-function bathroom() {
-    text1.textContent = "Badrummet"
-    text2.textContent = "Tänk att få krypa ner i det badkaret efter en kall vinterdag. Vad ska vi göra nu?"
-    button1.textContent = "Sovrummen"
-    button2.textContent = "Köket igen"
+function snowBallLights() {
+    text1.textContent = "Snölykta"
+    text2.textContent = "Du rullar 20 små snöbollar och bygger ihop dem till en lykta! Men nu börjar det bli kallt..Vad vill du göra när du kommer in?"
+    button1.textContent = "Dricka varmchoklad"
+    button2.textContent = "Titta på julfilm"
 
-    button1.onclick = bedroom;
-    button2.onclick = kitchen;
+    button1.onclick = hotChoclate;
+    button2.onclick = movie;
 }
 
 /**
  * Spelaren får två nya val, 'titta i sovrummen' eller 'titta i badrummet', för att gå vidare.
  */
-function stairs() {
-    text1.textContent = "Trappan upp"
-    text2.textContent = "Du kommer upp till övervåningen, vart vill du kika först?"
-    button1.textContent = "Sovrummen"
-    button2.textContent = "Badrummet"
+function hotChoclate() {
+    text1.textContent = "Dricka varm choklad"
+    text2.textContent = "Du kokar upp mölk, oboy och en liten nypa vaniljsocker i. MUMS!"
+    button1.textContent = "Filmdags"
+    button2.textContent = "Sova"
 
-    button1.onclick = bedroom;
-    button2.onclick = bathroom;
+    button1.onclick = movie;
+    button2.onclick = endGame2;
 }
 
 /**
  * Spelaren får två nya val, 'gå upp till övervåningen' eller 'gå tillbaka till hallen', för att gå vidare.
  */
-function livingRoom() {
-    text1.textContent = "Vardagsrummet"
-    text2.textContent = "Oj vad fint, här blir det mycket fredagsmys framöver. Vart går vi nu?"
-    button1.textContent = "Övervåningen"
-    button2.textContent = "Hallen igen"
+function movie() {
+    text1.textContent = "Titta på julfilm"
+    text2.textContent = "Vilken är din favorit film på jul " + playerName + "?"
+    button1.textContent = "Tomten är far till alla barnen!"
+    button2.textContent = "Ensam hemma 1, 2, 3 och 4!"
 
-    button1.onclick = stairs;
-    button2.onclick = loadStartScene; 
+    button1.onclick = endGame; //
+    button2.onclick = endGame; //
 }
 
-/**
- * Spelaren får två nya val, 'tillbaka till hallen' eller 'lämna huset', för att gå vidare.
- */
-function bedroom() {
-    text1.textContent = "Sovrummen"
-    text2.textContent = "Här kommer vi sova gott"
-    button1.textContent = "Hallen"
-    button2.textContent = "Lämna huset"
 
-    button1.onclick = loadStartScene;
-    button2.onclick = leaveHouse; 
-}
 
 /**
  * Spelaren får två nya val, 'göra om spelet igen' eller 'avsluta', för att gå vidare.
  */
-function leaveHouse() {
-    text1.textContent = "Tack för titten"
-    text2.textContent = "och på återseende!"
+function endGame() {
+    text1.textContent = "Alla filmerna är ju faktiskt bra så lika bra att se alla i ett streck!"
+    text2.textContent = "Vad vill du göra nu?"
     button1.textContent = "Börja om"
     button2.textContent = "Avsluta"
 
     button1.onclick = loadStartScene;
-    button2.onclick = goodbye; 
+    button2.onclick = goodbye;
     
 }
+function endGame2() {
+    text1.textContent = "Vilken mysig dag det blev " + playerName + "!"
+    text2.textContent = "Vad vill du göra nu?"
+    button1.textContent = "Börja om"
+    button2.textContent = "Avsluta"
 
-/**
- * Spelet avslutas och du välkomnas åter genom ett meddelande.
- */
+    button1.onclick = loadStartScene;
+    button2.onclick = goodbye;
+    
+}
 function goodbye() {
-    questionBox3.classList.add("hidden");
-    questionBox2.classList.remove("hidden");
+    text1.textContent = "Tack för idag " + playerName + ""
+    text2.textContent = "och en riktigt God Jul till dig !"
 
-    text1.textContent = "Tack för titten "
-    text2.textContent = "och på återseende!"
+    
 }
